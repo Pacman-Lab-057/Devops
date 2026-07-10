@@ -143,3 +143,19 @@ These parts vary in length depending on the class of the address.
 
 <img width="479" height="249" alt="image" src="https://github.com/user-attachments/assets/4b9598f2-66c0-44ea-bf50-b6159b5fdb76" />
 
+The IP Protocol
+At the network layer, the Internet can be viewed as a collection of subnet-works or Autonomous systems that are connected together. The network layer protocol that used for Internet is Internet Protocol (IP).Its job is to provide a best-efforts way to transport datagrams from source to destination, without regard to whether or not these machines are on the same network or not these are other networks in between them. Communication in the Internet works as follows.
+Each datagram is transmitted, after getting from Transport layer, through the Internet, possibly being fragmented into smaller units as it goes. When all pieces finally get to the destination machine, they are reassembled by the network layer into the original datagram. 
+
+Note:
+
+Datagram
+Packets in IP layer are called Datagrams. A Datagram is a variable length packet(upto 65,536 bytes) consisting of two parts : Header and Data. The
+header can be from 20 to 60 bytes and contains information essential to routing and delivery.
+
+Version
+The first field defines the version number of the IP. The current version is 4(IPv4),with binary value 0100.
+
+Header length
+(HLEN) The HLEN field defines the length of the header in multiples of four bytes .The four bits can represent a number between 0 to 15,which,when multiplied by 4,gives a maximum of 60 bytes.
+
