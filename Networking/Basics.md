@@ -158,4 +158,36 @@ The first field defines the version number of the IP. The current version is 4(I
 
 Header length
 (HLEN) The HLEN field defines the length of the header in multiples of four bytes .The four bits can represent a number between 0 to 15,which,when multiplied by 4,gives a maximum of 60 bytes.
+**Public vs private IPs.** Private ranges (RFC 1918) are reused inside every home/office/cloud network and **never routed on the public internet**:
+```
+10.0.0.0/8        (10.x.x.x)        ← huge; AWS VPCs love this
+172.16.0.0/12     (172.16–31.x.x)
+192.168.0.0/16    (192.168.x.x)     ← your home router
+```
+- **NAT (Network Address Translation)** lets many private devices share one public IP (it's why all your home gadgets reach the internet through one address).
+- `127.0.0.1` = **localhost** (this machine). `0.0.0.0` = "all interfaces / everywhere."
+
+**CIDR notation** — the `/number` you'll configure all over AWS and Kubernetes. The number = how many bits are the *network* part; the rest are for *hosts*:
+
+| CIDR | # addresses | Typical use |
+|---|---|---|
+| `/32` | 1 | a single host (e.g. "allow just my IP") |
+| `/28` | 16 | a tiny subnet |
+| `/24` | 256 (254 usable) | a standard subnet |
+| `/16` | 65,536 | a whole VPC |
+| `/8` | 16,777,216 | enormous |
+
+
+DNS — the internet's phonebook 📞 (your most common incident)
+
+Computers route by IP, but humans use names. **DNS** translates `github.com` → `140.82.x.x`.
+
+**The resolution journey** (step ① of our request) — when nothing is cached:
+```
+1. Browser cache?  →  2. OS cache + /etc/hosts?  →  3. Recursive resolver (your ISP or 8.8.8.8)
+                                                        │
+   4. Root server (.) ──► 5. TLD server (.com) ──► 6. Authoritative server (github.com)
+                                                        │
+                                              returns the IP ──► cached with a TTL
+
 
