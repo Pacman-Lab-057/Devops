@@ -1,24 +1,9 @@
 # DevOps + AI-in-DevOps Mastery Roadmap (2026 Edition)
 
-> **Your profile:** comfortable with basic Linux & coding · learning on **local labs + AWS** · goal = **land a DevOps job**
-> **This document = Step 0.** It's the full map. Once you approve it, we build one module at a time — each as its own detailed `.md` file with curated reference videos — and you confirm before we move on.
-
+> **Goal = **Learn DevOps**
 ---
 
-## How this works (our process)
-
-1. **You approve this roadmap** (or tell me what to add / cut / reorder).
-2. We tackle **one module at a time**. For each module I deliver:
-   - A detailed `NN_topic.md` notes file (concepts → commands → hands-on labs → "interview gotchas" → mini-project).
-   - **Curated reference videos** (verified current, mostly free).
-   - A **local-first lab** (runs on your machine) and, where relevant, an **AWS version**.
-3. You complete it, then say **"next"** — and only then do I build the following module. Nothing gets skipped.
-
-**Rule of thumb for the whole journey:** *Build → break → fix → document.* Hiring managers in 2026 care less about which buttons you can click and more about whether you can explain **why** an infra change is versioned, **how** a rollback works, and **what metric** tells you a release hurt users before the support tickets land.
-
----
-
-## The 2026 tech stack we'll cover
+## The 2026 tech stack we must cover
 
 | Layer | Tools you'll actually learn |
 |---|---|
@@ -167,5 +152,3 @@ PHASE 8 — Platform Eng & Career
 ```
 
 ---
-
-*Next step: review this map. Tell me to adjust anything — or say **"start Module 01"** and I'll build your first detailed notes file + videos.*
