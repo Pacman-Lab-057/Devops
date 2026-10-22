@@ -169,7 +169,7 @@ Header length
 
 **CIDR notation** — the `/number` you'll configure all over AWS and Kubernetes. The number = how many bits are the *network* part; the rest are for *hosts*:
 
-| CIDR | # addresses | Typical use |
+| CIDR | # addresses | usage |
 |---|---|---|
 | `/32` | 1 | a single host (e.g. "allow just my IP") |
 | `/28` | 16 | a tiny subnet |
