@@ -1,6 +1,4 @@
 # DevOps + AI-in-DevOps Mastery Roadmap (2026 Edition)
-
-> **Goal = **Learn DevOps**
 ---
 
 ## The 2026 tech stack we must cover
